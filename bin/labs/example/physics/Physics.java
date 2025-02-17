@@ -21,9 +21,11 @@ public class Physics {
 
             }
             double getLightSpeedInMPH(){
-                /* get speed of light in mph and return */
+                /* get speed of light in mph and return, this will need to be in hours rather than seconds
+                 * which will end up being 186282 * 3600 = 670,615,200 */
+                
                 double speedOfLight;
-                speedOfLight = 186282.0;
+                speedOfLight = 670615200.0;
                 return speedOfLight;
 
             }
