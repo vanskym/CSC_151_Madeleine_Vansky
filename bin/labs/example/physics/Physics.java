@@ -37,6 +37,14 @@ public class Physics {
                 return sunLightNum;
                 
             }
+            /*double getKnownDistanceToEarth(){
+                known distance to earth would be 92947266.72 miles 
+                double distanceNum;
+                distanceNum = getDistance();
+                
+
+
+            } */
         double getVelocity(){
             /* v = x/t */
             double v;
