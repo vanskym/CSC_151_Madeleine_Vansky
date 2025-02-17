@@ -32,7 +32,7 @@ public class Physics {
             x = keyboard.nextDouble();
             System.out.println("Please enter the number for time: ");
             t = keyboard.nextDouble();
-            v = x / t;
+            v = (x / t);
             System.out.println("The velocity is " + v +  " mph.");
             return v;
             
@@ -47,7 +47,7 @@ public class Physics {
             m = keyboard.nextDouble();
             System.out.println("Please enter the velocity of the object: ");
             v = keyboard.nextDouble();
-            p = m * v;
+            p = (m * v);
             System.out.println("The momentum of the object is " + p + " kg m/s.");
             return p;
 
@@ -62,7 +62,7 @@ public class Physics {
             m = keyboard.nextDouble();
             System.out.println("Please enter the acceleration of the object: ");
             a = keyboard.nextDouble();
-            f = m * a;
+            f = (m * a);
             System.out.println("The force of the object is " + f + " kg m/s^2.");
             return f;
         }
@@ -76,7 +76,7 @@ public class Physics {
             f = keyboard.nextDouble();
             System.out.println("Please enter the distance of the object: ");
             d = keyboard.nextDouble();
-            w = f * d;
+            w = (f * d);
             System.out.println("The work of the object is " + w + " NM/Joules.");
             return w;   
         }
@@ -90,9 +90,9 @@ public class Physics {
             m = keyboard.nextDouble();
             System.out.println("Please enter the velocity: ");
             v = keyboard.nextDouble();
-            v = v * v;
-            m = m / 2;
-            ke = m * v;
+            v = (v * v);
+            m = (m / 2);
+            ke = (m * v);
             System.out.println("The kinetic energy of the object is " + ke + " NM/Joules.");
             return ke;
 
@@ -107,7 +107,7 @@ public class Physics {
             m = keyboard.nextDouble();
             System.out.println("Please enter the height of the object: ");
             h = keyboard.nextDouble();
-            pe = m * gravity * h;
+            pe = ((m * gravity) * h);
             System.out.println("The potential energy of the object is " + pe + " NM/Joules.");
             return pe;
 
