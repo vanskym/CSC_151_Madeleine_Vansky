@@ -20,6 +20,21 @@ public class Physics {
 
 
             }
+            double getLightSpeedInMPH(){
+                /* get speed of light in mph and return */
+                double speedOfLight;
+                speedOfLight = 186282.0;
+                return speedOfLight;
+
+            }
+            double getTimeFromSunToEarthInHours(){
+                /* it takes approx. 8 mins 30 secs for sunlight to reach the earth */
+                /*  8.5 / 60  = .14 */
+                double sunLightNum;
+                sunLightNum = .14;
+                return sunLightNum;
+                
+            }
         double getVelocity(){
             /* v = x/t */
             double v;
@@ -116,6 +131,7 @@ public class Physics {
 
 
         }
+         
 
     }
 
