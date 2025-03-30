@@ -5,7 +5,8 @@ import java.nio.Buffer;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.* ;
-
+// reference to page 255 in books will look into more for assistance
+// we will be finding the average of the two students and their 3 different classes so this should be parsed as doubles
 public class fileOperator{
 
     private static final String FILE_PATH = "c:/myFiles/src/labs/example/fileOperations/";
@@ -24,7 +25,9 @@ private static void openCSVFile(){
 
     //more common error catcher
     try{
-        /*buffer writer: making it a new variable here. it is taking the filewriter object as an argument with error_log_file and append true(this just meaning you can add to it at the bottom*/
+        /*buffer writer: making it a new variable here. it is taking the filewriter object as an argument with error_log_file and append true(this just meaning you can add to it at the bottom
+         * 
+        */
 
         BufferedWriter csv_file_writer = BufferWriter(new FileWriter(ERROR_LOG_FILE, true));
         String line;
