@@ -29,13 +29,13 @@ private static void openCSVFile(){
          * 
         */
 
-        BufferedWriter csv_file_writer = BufferWriter(new FileWriter(ERROR_LOG_FILE, true));
+        BufferedWriter csv_file_writer = new BufferedWriter(new FileWriter(ERROR_LOG_FILE, true));
         String line;
         int count = 0;
-            if(count > 0){
-                /* the split method is good for splitting a list into a string array  */
+            /*if(count > 0){
+                /* the split method is good for splitting a list into a string array  
                 String[] value = line.split(",");
-            }
+            }*/
 
         if(csv_file.exists() && log_file.exists() ){
             
@@ -45,7 +45,11 @@ private static void openCSVFile(){
                 /* this is a way to convert a string into an integer, parses it into an integer */
                /*  Integer.parseInt("52");*/
                 
-                csv_file_writer.write(message);
+                csv_file_writer.write("message");
+                if(count > 0){
+                    /* the split method is good for splitting a list into a string array  */
+                    String[] value = line.split(",");
+                }
 
             }
 
