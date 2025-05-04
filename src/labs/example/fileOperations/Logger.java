@@ -39,7 +39,7 @@ public static void main(String[] args) throws IOException{
     BufferedReader verbs = openErrorLog("http_access_log");
     groupHTTPMethodsAndEndPoints(verbs);
     verbs.close();
-
+    ArrayList<String> httpMethod = new ArrayList<String>();
   }
 
 public static BufferedReader openErrorLog() throws IOException{

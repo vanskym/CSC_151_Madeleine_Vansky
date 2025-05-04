@@ -5,62 +5,67 @@ import java.nio.Buffer;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.* ;
-// reference to page 255 in books will look into more for assistance
-// we will be finding the average of the two students and their 3 different classes so this should be parsed as doubles
+
 public class fileOperator{
 
-    private static final String FILE_PATH = "c:/myFiles/src/labs/example/fileOperations/";
-    private static final String FILE_NAME = "file/users.csv";
+    private static final String FILE_PATH = "C:/Git/CSC_151_Madeleine_Vansky/src/labs/example/fileOperations/";
+    private static final String FILE_NAME = FILE_PATH + "files/users.csv";
     private static final String ERROR_LOG_FILE = FILE_PATH + "logs/csv_error.log";
 
-    public static void main(){
-        //call the open() file method //
-    }
-
-
-private static void openCSVFile(){
-    /* INSTANCES OF DIFFERENT FILES, THESE ARE OBJECT REFERENCES  */
-    File csv_file = new File(FILE_NAME);
-    File log_file = new File(ERROR_LOG_FILE);
-
-    //more common error catcher
-    try{
-        /*buffer writer: making it a new variable here. it is taking the filewriter object as an argument with error_log_file and append true(this just meaning you can add to it at the bottom
-         * 
-        */
-
-        BufferedWriter csv_file_writer = new BufferedWriter(new FileWriter(ERROR_LOG_FILE, true));
-        String line;
-        int count = 0;
-            /*if(count > 0){
-                /* the split method is good for splitting a list into a string array  
-                String[] value = line.split(",");
-            }*/
-
-        if(csv_file.exists() && log_file.exists() ){
-            
-            BufferedReader br = new BufferedReader(new FileReader(FILE_NAME));
-            while((line = br.readLine()) != null){
-
-                /* this is a way to convert a string into an integer, parses it into an integer */
-               /*  Integer.parseInt("52");*/
-                
-                csv_file_writer.write("message");
-                if(count > 0){
-                    /* the split method is good for splitting a list into a string array  */
-                    String[] value = line.split(",");
-                }
-
-            }
-
-            csv_file_writer.close();
-
-        }
-    }
-    catch(Exception e){
-
-    }
-
+public static void main(String[] args) throws IOException{
+    BufferedReader file = openCSVFile();
+    file.close();
+    
 }
+private static BufferedReader openCSVFile() throws IOException{
 
+    File csv_file = new File(FILE_NAME);
+
+
+    BufferedWriter csv_file_writer = new BufferedWriter(new FileWriter(FILE_NAME, true));
+
+        int count = 0;
+        int alice = 0;
+        int bob = 0;
+        File log_file = new File(FILE_NAME);
+        BufferedReader file = new BufferedReader(new FileReader(FILE_NAME));
+        try{
+            String line;
+           
+            if(log_file.exists() ){
+                 
+                while((line = file.readLine()) != null){
+                    String[] value = line.split(",");
+                    if (count == 1){
+                        int int1 = Integer.parseInt(value[1]);
+                        int int2 = Integer.parseInt(value[2]);
+                        int int3 = Integer.parseInt(value[3]);
+
+                        alice = (int1 + int2 + int3) / 3;
+
+                        
+                    }
+                    else if (count == 2){
+                        int int1 = Integer.parseInt(value[1]);
+                        int int2 = Integer.parseInt(value[2]);
+                        int int3 = Integer.parseInt(value[3]);
+
+                        bob = (int1 + int2 + int3) / 3;
+                    }
+                    
+                    count++;                    
+                   
+                }
+                }
+                System.out.println("The average for Alice's scores are: " + alice);
+                System.out.println("The average for Bobs's scores are: " + bob);
+
+           
+        }
+        catch(Exception e){
+     
+    }
+    
+    return new BufferedReader(new FileReader(ERROR_LOG_FILE));
+    }
 }

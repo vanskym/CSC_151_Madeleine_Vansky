@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "fileOperator",
+            "request": "launch",
+            "mainClass": "labs.example.fileOperations.fileOperator",
+            "projectName": "CSC_151_Madeleine_Vansky_4e59bd3e"
+        },
+        {
+            "type": "java",
             "name": "DataProcessor",
             "request": "launch",
             "mainClass": "labs.example.ai_generated.DataProcessor",

@@ -1,5 +1,7 @@
 package labs.example.ai_generated;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 
 /*import java.util.arrayList;*/
@@ -117,6 +119,7 @@ public class DataProcessor {
         System.out.println("Processing Complete: " + processor.isProcessingComplete());
         System.out.println("Average: " + processor.getAverageValue());
     }
+    String line;
 }
 
 
