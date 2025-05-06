@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ChatBot",
+            "request": "launch",
+            "mainClass": "labs.example.gemini.ChatBot",
+            "projectName": "CSC_151_Madeleine_Vansky_1c55c2fd"
+        },
+        {
+            "type": "java",
             "name": "fileOperator",
             "request": "launch",
             "mainClass": "labs.example.fileOperations.fileOperator",
